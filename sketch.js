@@ -199,6 +199,8 @@ function menu() {
   text("Créditos", 195, 350);
   textFont(NORMAL);
 
+}
+
 function fase1(){
   
   background(img5);

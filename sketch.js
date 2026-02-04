@@ -1,748 +1,203 @@
-x=150;
-y=120;
-xq= 37;
-yq= 130;
-placar=0;
-opcao=1;
+let x = 150;
+let y = 120;
 
-tela='menu'
+let xq = 37;
+let yq = 130;
 
-respostas = {"aab1": 4, "aab2": 1, "aab3": 3, "aab4":  4, "aab5": 2,"aab6": 3, "aab7": 2, "aab8": 1, "aab9": 1, "aab10": 4, "aab11": 3, "aab12": 4, "aab13": 2, "aab14": 1, "aab15": 2, "aab16": 3, "aab17": 4, "aab18": 2, "aab19": 1, "aab20": 3};
-telaTeste = {
-  'menu': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    y=y-100
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<3){
-      y=y+100
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == 1){
-        tela='aab1'
-        x = 40;
-        y = 190;
-      }
-      else if(opcao == 2){
-        tela='instrucoes'
-      }
-      else if(opcao == 3){
-        tela='creditos'
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'creditos': (key) => {
-    if(key == "Escape") tela = 'menu';
-  },
-  'instrucoes': (key) => {
-    if(key == "Escape") tela = 'menu';
-  },
-  'aab1': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == respostas[tela]){
-        placar += 1
-      tela='aab2'
-        
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab2'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab2': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == respostas[tela]){
-        placar += 1 
-      tela='aab3'   
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab3'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab3': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == respostas[tela]){
-        placar += 1     
-      tela='aab4'
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab4'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab4': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == respostas[tela]){
-        placar += 1    
-      tela='aab5'  
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab5'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab5': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-     if(opcao == respostas[tela]){
-        placar += 1   
-      tela='aab6' 
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab6'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab6': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == respostas[tela]){
-        placar += 1    
-      tela='aab7'    
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab7'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab7': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == respostas[tela]){
-        placar += 1     
-      tela='aab8'     
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab8'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab8': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == respostas[tela]){
-        placar += 1     
-      tela='aab9'    
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab9'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab9': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == respostas[tela]){
-        placar += 1    
-      tela='aab10'   
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab10'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab10': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-     if(opcao == respostas[tela]){
-        placar += 1    
-      tela='aab11'
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab11'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab11': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == respostas[tela]){
-        placar += 1     
-      tela='aab12'
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab12'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab12': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == respostas[tela]){
-        placar += 1     
-      tela='aab13'
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab13'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab13': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-     if(opcao == respostas[tela]){
-        placar += 1    
-      tela='aab14'
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab14'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab14': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == respostas[tela]){
-        placar += 1   
-      tela='aab15'
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab15'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab15': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == respostas[tela]){
-        placar += 1   
-      tela='aab16'
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab16'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab16': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == respostas[tela]){
-        placar += 1    
-      tela='aab17'
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab17'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab17': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == respostas[tela]){
-        placar += 1    
-      tela='aab18'
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab18'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab18': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == respostas[tela]){
-        placar += 1   
-      tela='aab19'
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab19'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab19': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == respostas[tela]){
-        placar += 1    
-      tela='aab20'
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='aab20'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'aab20': (key) => { 
-    if(key=="ArrowUp" && opcao>1){
-    yq=yq-25
-    opcao=opcao-1;
-    console.log(opcao)
-    }
-    if(key=="ArrowDown" && opcao<4){
-      yq=yq+25
-      opcao=opcao+1;
-      console.log(opcao)
-    }
-    if(key=="Enter"){
-      if(opcao == respostas[tela]){
-        placar += 1    
-      tela='acertos'
-    }
-      else if(key=="Enter"){
-        if(opcao != respostas[tela]){
-        placar += 0
-      tela='acertos'
-      }
-      }
-    }
-    if(key=="Escape"){
-      x=150
-      y=120
-      placar=0
-      opcao=1
-      tela='menu'
-    }
-  },
-  'acertos': (key) => {
-    x=150
-    y=120
-    placar=0
-    opcao=1
-    tela = 'menu';
+let placar = 0;
+let opcao = 1;
+
+let tela = "menu";
+
+const respostas = {
+  "aab1": 4, "aab2": 1, "aab3": 3, "aab4": 4, "aab5": 2,
+  "aab6": 3, "aab7": 2, "aab8": 1, "aab9": 1, "aab10": 4,
+  "aab11": 3, "aab12": 4, "aab13": 2, "aab14": 1, "aab15": 2,
+  "aab16": 3, "aab17": 4, "aab18": 2, "aab19": 1, "aab20": 3
+};
+
+let telas = {};
+let telaTeste = {};
+
+let img, img1, img2, img3, img4, img5;
+let fontYesterdayDream;
+
+function resetPergunta() {
+  opcao = 1;
+  yq = 130;
+}
+
+function resetMenu() {
+  x = 150;
+  y = 120;
+  placar = 0;
+  opcao = 1;
+  tela = "menu";
+  resetPergunta();
+}
+
+function proximaTelaPergunta() {
+  const numeroAtual = parseInt(tela.replace("aab", ""), 10);
+  if (numeroAtual >= 20) return "acertos";
+  return `aab${numeroAtual + 1}`;
+}
+
+function handlePerguntaKey(key) {
+  if (key === "ArrowUp" && opcao > 1) {
+    yq -= 25;
+    opcao -= 1;
+  }
+
+  if (key === "ArrowDown" && opcao < 4) {
+    yq += 25;
+    opcao += 1;
+  }
+
+  if (key === "Enter") {
+    if (opcao === respostas[tela]) {
+      placar += 1;
+    }
+    tela = proximaTelaPergunta();
+    resetPergunta();
+  }
+
+  if (key === "Escape") {
+    resetMenu();
   }
 }
-  
 
-function preload()
-{
-  placar = 0
+function preload() {
+  placar = 0;
+
   telas = {
-  'menu': menu,
-  'aab1': fase1,
-  'aab2': fase2,
-  'aab3': fase3,
-  'aab4': fase4,
-  'aab5': fase5,
-  'aab6': fase6,
-  'aab7': fase7,
-  'aab8': fase8,
-  'aab9': fase9,
-  'aab10': fase10,
-  'aab11': fase11,
-  'aab12': fase12,
-  'aab13': fase13,
-  'aab14': fase14,
-  'aab15': fase15,
-  'aab16': fase16,
-  'aab17': fase17,
-  'aab18': fase18,
-  'aab19': fase19,
-  'aab20': fase20,
-  'creditos': creditos,
-  'instrucoes': instrucoes,
-  'acertos': acertos
-}
-  
-img=loadImage("fundoinicial.jpg");
-img1=loadImage("parabens.jpg");
-img2=loadImage("fundoinicial.jpg");
-img3=loadImage("fundobranco.jpg")
-img4=loadImage("fundoinicial.jpg")
-img5=loadImage("fototelajogo.jpg")
-img6=loadImage("fotoeducadora.jpg")
-img7=loadImage("fotoperfil.jpg")
-fontYesterdayDream=loadFont("YesterdayDream.otf")
+    "menu": menu,
+    "aab1": fase1,
+    "aab2": fase2,
+    "aab3": fase3,
+    "aab4": fase4,
+    "aab5": fase5,
+    "aab6": fase6,
+    "aab7": fase7,
+    "aab8": fase8,
+    "aab9": fase9,
+    "aab10": fase10,
+    "aab11": fase11,
+    "aab12": fase12,
+    "aab13": fase13,
+    "aab14": fase14,
+    "aab15": fase15,
+    "aab16": fase16,
+    "aab17": fase17,
+    "aab18": fase18,
+    "aab19": fase19,
+    "aab20": fase20,
+    "creditos": creditos,
+    "instrucoes": instrucoes,
+    "acertos": acertos
+  };
+
+  img = loadImage("fundoinicial.jpg");
+  img1 = loadImage("parabens.jpg");
+  img2 = loadImage("fundoinicial.jpg");
+  img3 = loadImage("fundobranco.jpg");
+  img4 = loadImage("fundoinicial.jpg");
+  img5 = loadImage("fototelajogo.jpg");
+
+  fontYesterdayDream = loadFont("YesterdayDream.otf");
+
+  telaTeste = {
+    "menu": (key) => {
+      if (key === "ArrowUp" && opcao > 1) {
+        y -= 100;
+        opcao -= 1;
+      }
+
+      if (key === "ArrowDown" && opcao < 3) {
+        y += 100;
+        opcao += 1;
+      }
+
+      if (key === "Enter") {
+        if (opcao === 1) {
+          tela = "aab1";
+          x = 40;
+          y = 190;
+          resetPergunta();
+        } else if (opcao === 2) {
+          tela = "instrucoes";
+        } else if (opcao === 3) {
+          tela = "creditos";
+        }
+      }
+
+      if (key === "Escape") {
+        resetMenu();
+      }
+    },
+
+    "creditos": (key) => {
+      if (key === "Escape") tela = "menu";
+    },
+
+    "instrucoes": (key) => {
+      if (key === "Escape") tela = "menu";
+    },
+    
+    "aab1": handlePerguntaKey,
+    "aab2": handlePerguntaKey,
+    "aab3": handlePerguntaKey,
+    "aab4": handlePerguntaKey,
+    "aab5": handlePerguntaKey,
+    "aab6": handlePerguntaKey,
+    "aab7": handlePerguntaKey,
+    "aab8": handlePerguntaKey,
+    "aab9": handlePerguntaKey,
+    "aab10": handlePerguntaKey,
+    "aab11": handlePerguntaKey,
+    "aab12": handlePerguntaKey,
+    "aab13": handlePerguntaKey,
+    "aab14": handlePerguntaKey,
+    "aab15": handlePerguntaKey,
+    "aab16": handlePerguntaKey,
+    "aab17": handlePerguntaKey,
+    "aab18": handlePerguntaKey,
+    "aab19": handlePerguntaKey,
+    "aab20": handlePerguntaKey,
+
+    "acertos": (key) => {
+      resetMenu();
+    }
+  };
 }
 
-function setup(){
-  createCanvas(500,500)
+function setup() {
+  createCanvas(500, 500);
 }
 
-function draw(){
+function draw() {
   background(img4);
   telas[tela]();
 }
 
-function drawPlacar(){
-  text(`Pontos: ${placar}`, 40, 400, 300, 50)
+function keyPressed() {
+  if (telaTeste[tela]) {
+    telaTeste[tela](key);
+  }
+}
+function drawPlacar() {
+  text(`Pontos: ${placar}`, 40, 400, 300, 50);
 }
 
-function menu(){
-  rect(x,y,185,45)
-  textSize(34)
-  textFont(fontYesterdayDream)
-  text("GEOGRAGAME", 170, 50)
-  textSize(32)
-  text("Iniciar", 195, 160)
-  text("Instruções", 180, 250)
-  text("Créditos", 195, 350)
-  textFont(NORMAL)
-}
+function menu() {
+  rect(x, y, 185, 45);
+  textSize(34);
+  textFont(fontYesterdayDream);
+  text("GEOGRAGAME", 170, 50);
+  textSize(32);
+  text("Iniciar", 195, 160);
+  text("Instruções", 180, 250);
+  text("Créditos", 195, 350);
+  textFont(NORMAL);
 
 function fase1(){
   
@@ -1051,34 +506,43 @@ function fase20(){
     drawPlacar()
 }
 function acertos(){
-    background(img1);
-  textSize(24)
-    text(`Você conseguiu acertar ${placar} questões!`, 50, 50)
+  background(img1);
+  textSize(24);
+  text(`Você conseguiu acertar ${placar} questões!`, 50, 50);
+  textSize(14);
+  text("Pressione qualquer tecla para voltar ao menu.", 50, 90);
 }
 
-function instrucoes(){
-  background(img3)
-  textStyle()
+function instrucoes() {
+  background(img3);
   textSize(16);
-    stroke(1)
-    textAlign(LEFT);
-    text("Ano: 6º ano."+"\n"+"Materia: Geografia."+"\n"+"Resumo: O jogo de perguntas e respostas busca estimular o utilizador a testar seus conhecimentos e habilidades em relacionar padrões climáticos, tipos de solo, relevo e formações vegetais, onde os alunos terão perguntas que farão o estudo mais pratico e rapido.",20,20,260,260);
- 
+  stroke(1);
+  textAlign(LEFT);
 
-}
-function creditos(){
-  background(img3)
-  textSize(16);
-    stroke(23)
-    textAlign(LEFT);
-    image(img6, 90,90,140,150);
-    image(img7,110,310,140,150);
-    text("Aluno: Lucas Padilha Barbosa."+"\n", 80, 300)
-    text("Educadora: Maria Silene Padilha Barbosa."+"\n",80,60,320,320)
+  text(
+    "Como jogar:\n" +
+    "- Use as setas (↑ ↓) para escolher a alternativa\n" +
+    "- Enter confirma a resposta\n" +
+    "- ESC volta para o menu\n\n" +
+    "Objetivo:\n" +
+    "Treinar conhecimentos de geografia com perguntas de múltipla escolha.",
+    20, 20, 460, 260
+  );
 }
 
+function creditos() {
+  background(img3);
+  textSize(18);
+  stroke(23);
+  textAlign(LEFT);
 
-function keyPressed(){
-  telaTeste[tela](key)
+  text("Créditos", 80, 60);
 
+  textSize(14);
+  text("Desenvolvido por: Lucas Padilha", 80, 120);
+  text("Jogo de perguntas e respostas (Geografia)", 80, 150);
+  text("Feito com: HTML, CSS, JavaScript (p5.js)", 80, 180);
+
+  textSize(12);
+  text("Voltar: ESC", 80, 240);
 }
